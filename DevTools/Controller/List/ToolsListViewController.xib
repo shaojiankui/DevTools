@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ToolsListViewController">
+            <connections>
+                <outlet property="collectionView" destination="6oA-bo-RdY" id="NiD-jk-PpS"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grg-dX-aBU">
+                    <rect key="frame" x="15" y="15" width="450" height="206"/>
+                    <clipView key="contentView" drawsBackground="NO" id="u3j-PB-zcg">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="206"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView selectable="YES" id="6oA-bo-RdY">
+                                <rect key="frame" x="0.0" y="0.0" width="446" height="158"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" id="gkn-kV-0or"/>
+                                <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="-2" id="UdX-K3-k9z"/>
+                                    <outlet property="delegate" destination="-2" id="PAA-7o-2Fj"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="fqq-1x-GO0">
+                        <rect key="frame" x="1" y="144" width="233" height="15"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Ace-8i-nT7">
+                        <rect key="frame" x="234" y="1" width="15" height="143"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+                <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gsg-94-Zfr">
+                    <rect key="frame" x="13" y="234" width="454" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="n1h-5k-SGE"/>
+                    </constraints>
+                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="xut-g9-bGF">
+                        <font key="font" metaFont="system"/>
+                        <segments>
+                            <segment label="个性化" selected="YES"/>
+                            <segment label="开发" tag="1"/>
+                            <segment label="站长"/>
+                            <segment label="黑客"/>
+                            <segment label="多媒体"/>
+                            <segment label="便民"/>
+                            <segment label="其他"/>
+                        </segments>
+                    </segmentedCell>
+                    <connections>
+                        <action selector="segmentControlClicked:" target="-2" id="H3i-Im-99i"/>
+                    </connections>
+                </segmentedControl>
+            </subviews>
+            <constraints>
+                <constraint firstItem="gsg-94-Zfr" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="15" id="2Uj-K4-T9b"/>
+                <constraint firstItem="grg-dX-aBU" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="15" id="5G4-Zb-eid"/>
+                <constraint firstAttribute="trailing" secondItem="grg-dX-aBU" secondAttribute="trailing" constant="15" id="NiE-z0-Are"/>
+                <constraint firstItem="grg-dX-aBU" firstAttribute="top" secondItem="gsg-94-Zfr" secondAttribute="bottom" constant="15" id="VFZ-Um-3pY"/>
+                <constraint firstItem="gsg-94-Zfr" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="15" id="cGT-g4-EMD"/>
+                <constraint firstAttribute="trailing" secondItem="gsg-94-Zfr" secondAttribute="trailing" constant="15" id="q46-rp-5Sj"/>
+                <constraint firstAttribute="bottom" secondItem="grg-dX-aBU" secondAttribute="bottom" constant="15" id="zpH-o4-uAl"/>
+            </constraints>
+            <point key="canvasLocation" x="200" y="75"/>
+        </customView>
+        <collectionViewItem id="2ut-Id-vPk" customClass="ToolsListItem"/>
+    </objects>
+</document>
