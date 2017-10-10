@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="OpenedToolsViewController">
+            <connections>
+                <outlet property="tabBar" destination="nVo-ge-xxJ" id="ucH-nV-uoS"/>
+                <outlet property="tabView" destination="lFh-Vr-5u0" id="qz6-T9-Y2T"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="652" height="465"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <tabView type="noTabsNoBorder" translatesAutoresizingMaskIntoConstraints="NO" id="lFh-Vr-5u0">
+                    <rect key="frame" x="0.0" y="0.0" width="652" height="399"/>
+                    <font key="font" metaFont="system"/>
+                    <tabViewItems/>
+                    <connections>
+                        <outlet property="delegate" destination="nVo-ge-xxJ" id="ekL-7Z-YYj"/>
+                    </connections>
+                </tabView>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="nVo-ge-xxJ" customClass="PSMTabBarControl">
+                    <rect key="frame" x="0.0" y="399" width="652" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="32G-Rg-b3Y"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-2" id="GKm-jg-9bl"/>
+                        <outlet property="tabView" destination="lFh-Vr-5u0" id="nbd-Ca-AFF"/>
+                    </connections>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="lFh-Vr-5u0" secondAttribute="bottom" id="IBW-bh-Wpx"/>
+                <constraint firstAttribute="trailing" secondItem="lFh-Vr-5u0" secondAttribute="trailing" id="IO2-vV-cls"/>
+                <constraint firstAttribute="trailing" secondItem="nVo-ge-xxJ" secondAttribute="trailing" id="NU9-gj-PAY"/>
+                <constraint firstItem="lFh-Vr-5u0" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="ZS1-yA-wVd"/>
+                <constraint firstItem="lFh-Vr-5u0" firstAttribute="top" secondItem="nVo-ge-xxJ" secondAttribute="bottom" id="gTk-Kr-noV"/>
+                <constraint firstItem="nVo-ge-xxJ" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="44" id="t1l-ZX-MYg"/>
+                <constraint firstItem="nVo-ge-xxJ" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="xfW-B1-Fb4"/>
+            </constraints>
+            <point key="canvasLocation" x="134" y="114.5"/>
+        </customView>
+    </objects>
+</document>

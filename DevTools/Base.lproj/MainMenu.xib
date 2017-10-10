@@ -12,9 +12,10 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="tabView" destination="a5W-cY-Gr7" id="O1Q-iD-2Xj"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -692,6 +693,32 @@
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <tabView initialItem="Qoe-Cr-aH9" translatesAutoresizingMaskIntoConstraints="NO" id="a5W-cY-Gr7">
+                        <rect key="frame" x="8" y="5" width="1008" height="754"/>
+                        <font key="font" metaFont="system" size="15"/>
+                        <tabViewItems>
+                            <tabViewItem label="所有工具" identifier="" id="Qoe-Cr-aH9">
+                                <view key="view" id="AlT-QZ-bcr">
+                                    <rect key="frame" x="10" y="33" width="988" height="708"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="当前打开" identifier="" id="6eZ-ke-qcx">
+                                <view key="view" id="KUZ-ar-PP4">
+                                    <rect key="frame" x="10" y="33" width="988" height="644"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                            </tabViewItem>
+                        </tabViewItems>
+                    </tabView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="a5W-cY-Gr7" secondAttribute="trailing" constant="15" id="Ddy-Pr-gtW"/>
+                    <constraint firstItem="a5W-cY-Gr7" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="15" id="WuX-xf-Uz9"/>
+                    <constraint firstAttribute="bottom" secondItem="a5W-cY-Gr7" secondAttribute="bottom" constant="15" id="avV-2u-GmP"/>
+                    <constraint firstItem="a5W-cY-Gr7" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="15" id="j8f-Qf-yyT"/>
+                </constraints>
             </view>
             <point key="canvasLocation" x="317" y="485"/>
         </window>

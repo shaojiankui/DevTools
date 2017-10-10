@@ -19,13 +19,13 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grg-dX-aBU">
-                    <rect key="frame" x="15" y="15" width="450" height="206"/>
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="235"/>
                     <clipView key="contentView" drawsBackground="NO" id="u3j-PB-zcg">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="206"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="235"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView selectable="YES" id="6oA-bo-RdY">
-                                <rect key="frame" x="0.0" y="0.0" width="446" height="158"/>
+                                <rect key="frame" x="0.0" y="0.0" width="476" height="158"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" id="gkn-kV-0or"/>
                                 <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -47,11 +47,8 @@
                     </scroller>
                 </scrollView>
                 <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gsg-94-Zfr">
-                    <rect key="frame" x="13" y="234" width="454" height="24"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="21" id="n1h-5k-SGE"/>
-                    </constraints>
-                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="xut-g9-bGF">
+                    <rect key="frame" x="10" y="249" width="470" height="23"/>
+                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="capsule" trackingMode="selectOne" id="xut-g9-bGF">
                         <font key="font" metaFont="system"/>
                         <segments>
                             <segment label="个性化" selected="YES"/>
@@ -69,13 +66,13 @@
                 </segmentedControl>
             </subviews>
             <constraints>
-                <constraint firstItem="gsg-94-Zfr" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="15" id="2Uj-K4-T9b"/>
-                <constraint firstItem="grg-dX-aBU" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="15" id="5G4-Zb-eid"/>
-                <constraint firstAttribute="trailing" secondItem="grg-dX-aBU" secondAttribute="trailing" constant="15" id="NiE-z0-Are"/>
-                <constraint firstItem="grg-dX-aBU" firstAttribute="top" secondItem="gsg-94-Zfr" secondAttribute="bottom" constant="15" id="VFZ-Um-3pY"/>
-                <constraint firstItem="gsg-94-Zfr" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="15" id="cGT-g4-EMD"/>
-                <constraint firstAttribute="trailing" secondItem="gsg-94-Zfr" secondAttribute="trailing" constant="15" id="q46-rp-5Sj"/>
-                <constraint firstAttribute="bottom" secondItem="grg-dX-aBU" secondAttribute="bottom" constant="15" id="zpH-o4-uAl"/>
+                <constraint firstAttribute="bottom" secondItem="grg-dX-aBU" secondAttribute="bottom" id="02c-Fx-Cky"/>
+                <constraint firstItem="gsg-94-Zfr" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="JTn-K0-JMS"/>
+                <constraint firstItem="grg-dX-aBU" firstAttribute="top" secondItem="gsg-94-Zfr" secondAttribute="bottom" constant="15" id="QEj-0f-e18"/>
+                <constraint firstAttribute="trailing" secondItem="gsg-94-Zfr" secondAttribute="trailing" id="QvS-Ui-P4b"/>
+                <constraint firstItem="gsg-94-Zfr" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="kSa-wo-ubj"/>
+                <constraint firstAttribute="trailing" secondItem="grg-dX-aBU" secondAttribute="trailing" id="leD-A9-sCf"/>
+                <constraint firstItem="grg-dX-aBU" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="ohu-WH-JqL"/>
             </constraints>
             <point key="canvasLocation" x="200" y="75"/>
         </customView>

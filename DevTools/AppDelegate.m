@@ -8,24 +8,35 @@
 
 #import "AppDelegate.h"
 #import "ToolsListViewController.h"
-
+#import "OpenedToolsViewController.h"
+#import "OpenedWindowController.h"
 @interface AppDelegate ()
 {
     ToolsListViewController *_list;
-
-
+    OpenedToolsViewController   *_opend;
 }
-@property (weak) IBOutlet NSWindow *window;
 @end
 
 @implementation AppDelegate
++(AppDelegate*)APP{
+    return (AppDelegate*)[[NSApplication sharedApplication] delegate];
+}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
-    _list = [[ToolsListViewController alloc] initWithNibName:@"ToolsListViewController" bundle:nil];
+    _list = [[ToolsListViewController alloc] init];
     
-    self.window.contentViewController = _list;
- 
+    NSTabViewItem *listItem =  [self.tabView.tabViewItems objectAtIndex:0];
+    listItem.view = _list.view;
+    listItem.viewController = _list;
+    
+    _opend = [[OpenedToolsViewController alloc] init];
+    NSTabViewItem *openedItem =  [self.tabView.tabViewItems objectAtIndex:1];
+    openedItem.view = _opend.view;
+    openedItem.viewController = _opend;
+    
+//    OpenedWindowController *newWindow = [[OpenedWindowController alloc] initWithWindowNibName:@"OpenedWindowController"];
+//    [newWindow showWindow:self];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

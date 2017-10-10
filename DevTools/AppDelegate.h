@@ -7,8 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
 @interface AppDelegate : NSObject <NSApplicationDelegate>
-@property (weak) IBOutlet NSSegmentedCell *segment;
+@property (weak) IBOutlet NSWindow *window;
+@property (weak) IBOutlet NSTabView *tabView;
++(AppDelegate*)APP;
 @end
 
